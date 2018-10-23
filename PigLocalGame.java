@@ -6,6 +6,7 @@ import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameState;
 
 import android.util.Log;
+import android.view.View;
 
 import java.util.Random;
 
@@ -30,6 +31,7 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
+
         if (theState.getID() == playerIdx)
         {
             return true;
@@ -44,6 +46,7 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
+
         if(action instanceof PigHoldAction)
         {
             if(players.length ==1)
@@ -112,11 +115,13 @@ public class PigLocalGame extends LocalGame {
     protected String checkIfGameOver() {
         if(theState.getScore0() >= 50)
         {
-            System.out.print("Player 0 won");
+            System.out.print("Player 1 won");
+            return "Player 1 won";
 
         }
         else if(theState.getScore1() >= 50){
-            System.out.print("Player 1 won");
+            System.out.print("Player 2 won");
+            return "Player 2 won";
         }
         return null;
     }

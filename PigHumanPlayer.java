@@ -69,15 +69,19 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
 
             if (theState.getID() == 0)
             {
-                playerScoreTextView.setText(String.valueOf(theState.getScore0()));
-            oppScoreTextView.setText(String.valueOf(theState.getScore1()));
-            turnTotalTextView.setText(String.valueOf(theState.getRunningTotal()));
-        }
-            else {
+                //View v = this.getWindow().getDecorView().findViewById(R.id.top_gui_layout);
+                //v.setBackgroundColor(Color.RED);
+
+
                 playerScoreTextView.setText(String.valueOf(theState.getScore0()));
                 oppScoreTextView.setText(String.valueOf(theState.getScore1()));
-                turnTotalTextView.setText(String.valueOf(theState.getRunningTotal()));
+            turnTotalTextView.setText(String.valueOf(theState.getRunningTotal()));
             }
+            /*else {
+                playerScoreTextView.setText(String.valueOf(theState.getScore1()));
+                oppScoreTextView.setText(String.valueOf(theState.getScore0()));
+                turnTotalTextView.setText(String.valueOf(theState.getRunningTotal()));
+            }*/
 
 
             switch(theState.getValueOnDie()) {
@@ -137,6 +141,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
         //Initialize the widget reference member variables
         this.playerScoreTextView = (TextView)activity.findViewById(R.id.yourScoreValue);
         this.oppScoreTextView    = (TextView)activity.findViewById(R.id.oppScoreValue);
+
         this.turnTotalTextView   = (TextView)activity.findViewById(R.id.turnTotalValue);
         this.messageTextView     = (TextView)activity.findViewById(R.id.messageTextView);
         this.dieImageButton      = (ImageButton)activity.findViewById(R.id.dieButton);

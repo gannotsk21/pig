@@ -1,10 +1,14 @@
 package edu.up.cs301.pig;
 
+import android.graphics.Color;
+import android.view.View;
+
 import java.util.ArrayList;
 
 import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.LocalGame;
+import edu.up.cs301.game.R;
 import edu.up.cs301.game.config.GameConfig;
 import edu.up.cs301.game.config.GamePlayerType;
 
@@ -62,5 +66,7 @@ public class PigMainActivity extends GameMainActivity {
     public LocalGame createLocalGame() {
         return new PigLocalGame();
     }
+
+
 
 }
